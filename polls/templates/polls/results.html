@@ -1,0 +1,16 @@
+{% load static %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/details.css' %}">
+<body>
+<fieldset>
+	<h1 class="ques">{{ question.question_text }}</h1>
+
+	<ul>
+	{% for choice in question.choice_set.all %}
+    	<li style="padding-top: 20px">{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+	{% endfor %}
+	</ul>
+	<a style="color:grey;font-size:20px;text-decoration: underline"href="{% url 'polls:detail' question.id %}">Vote again?</a>
+</fieldset>
+</body>
+

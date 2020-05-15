@@ -1,0 +1,16 @@
+{% load static %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/details.css' %}">
+
+<body>
+<fieldset>
+	<h1 class="ques">Movie Details</h1>
+	<body style="color:white; font-size: 15px">
+		<p> Name : {{name}} </p>
+		<p> Genre : {{genre}} </p>
+		<p> Year : {{year}} </p>
+		<p> Actors : {{actors}} </p>
+	</body>
+
+</fieldset>
+</body>

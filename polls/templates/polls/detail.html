@@ -1,0 +1,20 @@
+{% load static %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/details.css' %}">
+
+<body>
+<fieldset>
+	<h1 class="ques">{{ question.question_text }}</h1>
+
+	{% if error_message %}<p style="color:red;"><strong>{{ error_message }}</strong></p>{% endif %}
+
+	<form action="{% url 'polls:vote' question.id %}" method="post">
+	{% csrf_token %}
+	{% for choice in question.choice_set.all %}
+    	<input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+    	<label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+	{% endfor %}
+	<input class="btn btn-light" type="submit" value="Vote">
+	</form>
+</fieldset>
+</body>

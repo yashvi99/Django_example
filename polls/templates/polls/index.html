@@ -1,0 +1,27 @@
+{% load static %}
+
+<link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<div class="page-header">
+    <h1 style="font-family: 'Amaranth';">CinePhile Polls:</h1>
+</div>
+
+<div class="about">
+&#9733; Hello folks! please vote for your favourites and help them win. cheers!!
+</div>
+
+<div class="polls">
+{% if latest_list %}
+    <ul>
+    {% for question in latest_list %}
+        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+</div>
+
+

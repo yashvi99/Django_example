@@ -1,0 +1,24 @@
+body{
+    background-image: url('back.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 25% 50%;
+}
+
+.page-header {
+    background: #233743;
+    font-size: 30pt;
+    padding: 20px 20px 20px 40px;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.poll {
+    margin-bottom: 70px;
+}
+
+.about {
+    float: right;
+    font-size: 15pt;
+    margin-right: 20px;
+}
