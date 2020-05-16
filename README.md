@@ -1,4 +1,4 @@
 # Django_example
 
-polls and data about movies using API and Django
+Polls and Data about movies using API and Django \n
 https://cinephile-polls.herokuapp.com/
