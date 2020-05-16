@@ -1,8 +1,8 @@
-# Django_example
+# Django - Example
 
-Polls and Data about movies using API and Django
+Polls and Data about movies using API (http://www.omdbapi.com/) and Django
 
-https://cinephile-polls.herokuapp.com/
+polls: https://cinephile-polls.herokuapp.com/
 
-https://cinephile-polls.herokuapp.com/movie/call%20me%20by%20your%20name
+movie Data: https://cinephile-polls.herokuapp.com/movie/call%20me%20by%20your%20name
 (movie/<movie_name>)
