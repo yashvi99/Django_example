@@ -4,7 +4,7 @@ Polls and Data about movies using API (http://www.omdbapi.com/) and Django
 
 Web App -- https://cinephile-polls.herokuapp.com/
 
-User can also get data about a specific movie using 'movie' parametre. { /movie/<movie_name> }
+User can also get data about a specific movie using 'movie' parametre - /movie/<movie_name>
 
 Example - https://cinephile-polls.herokuapp.com/movie/call%20me%20by%20your%20name
 
